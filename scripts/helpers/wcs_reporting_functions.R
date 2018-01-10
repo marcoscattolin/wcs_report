@@ -24,9 +24,9 @@ get_path <- function(key, base_path = "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Rep
 
 
 # WCS REPORT -------------------------------------------------------
-download_wcs <- function(url = "https://backofficewcs.pradagroup.net:8000/pradareports/csrOrderReport.xls", remove_temporary = T){
+download_wcs <- function(remove_temporary = T){
         
-        
+        url <- get_path("wcs_remote_url")
         h <- new_handle()
         handle_setopt(h, ssl_verifypeer = F)
         curl_download(url, get_path("wcs_temp_xls"), handle = h)
