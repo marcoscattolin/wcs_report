@@ -16,7 +16,13 @@ get_path <- function(key, base_path = "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Rep
         
         if(length(res) == 0){
                 stop(paste0("Not found file pointer to ",key))
-        } else{paste0(base_path,res)}
+        } else{
+                if(key == "wcs_remote_url"){
+                        res
+                } else{
+                        paste0(base_path,res)
+                }
+                }
         
         
         
