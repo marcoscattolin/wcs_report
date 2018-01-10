@@ -7,7 +7,7 @@ library(curl)
 
 
 message("\n\n\n\n\n\n\n-------- STARTING SCRIPT --------")
-source("helpers/wcs_reporting_functions.R")
+source("scripts/helpers/wcs_reporting_functions.R")
 
 
 
