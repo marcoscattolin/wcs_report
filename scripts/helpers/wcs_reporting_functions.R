@@ -123,7 +123,15 @@ enrich_wcs <- function(){
         
 }
 
-wcs_save_dataset <- function(){
+strings_cutoff <- function(cutoff = 180){
+        
+        #truncate strings longer than cutoff characters 
+        wcs <<- wcs %>% 
+                mutate_if(is.character, ~ case_when(str_length(.) > cutoff ~ str_sub(1,cutoff), TRUE ~ .))
+}
+
+wcs_save_dataset <- function(string_cutoff = 180){
+        
         
         write.csv2(wcs, file = get_path("wcs_output"), na = "", row.names = F)
         

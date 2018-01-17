@@ -16,6 +16,7 @@ source("scripts/helpers/wcs_reporting_functions.R")
 message("------ DOWNLOADING WCS DATA -------\n")
 download_wcs(remove_temporary = T)
 enrich_wcs()
+strings_cutoff()
 wcs_save_dataset()
 message("------ DOWNLOADING WCS DATA: DONE -------\n")
 
