@@ -134,6 +134,6 @@ wcs_save_dataset <- function(string_cutoff = 180){
         
         wcs %>% 
                 mutate(script_exec_time = Sys.time()) %>% 
-        write.csv2(file = get_path("wcs_output"), na = "", row.names = F)
+        write_csv(path = get_path("wcs_output"), na = "")
         
 }
