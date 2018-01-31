@@ -132,7 +132,8 @@ strings_cutoff <- function(cutoff = 180){
 
 wcs_save_dataset <- function(string_cutoff = 180){
         
-        
-        write.csv2(wcs, file = get_path("wcs_output"), na = "", row.names = F)
+        wcs %>% 
+                mutate(script_exec_time = Sys.time()) %>% 
+        write.csv2(file = get_path("wcs_output"), na = "", row.names = F)
         
 }

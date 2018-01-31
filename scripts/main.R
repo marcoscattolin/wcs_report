@@ -13,7 +13,7 @@ source("scripts/helpers/wcs_reporting_functions.R")
 
 
 # DOWNLOAD WCS DATA -------------------------------------------------------
-message("Downloadiding WCS data ...\n")
+message("Downloading WCS data ...\n")
 download_wcs(remove_temporary = T)
 message("Downloaded WCS data!\n")
 enrich_wcs()
